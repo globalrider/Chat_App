@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+	
+.box1{
+	border:1px solid black;
+	
+	width: 100%;
+	height: 200px;
+	margin-top: 10px;
+}
+.box{
+	border:1px solid black;
+	margin-top: 10px;
+}
+input{
+	height: 30px;
+	width: 200px;
+}
+button{
+	background-color: green;
+	color: white;
+	height: 40px;
+	width: 50px;
+}
+.container{
+
+}
+
+
+
+
+</style>
+
+
+
+	<title>Chat app</title>
+	<link rel="shortcut icon" href="C:\Users\ADMIN\Desktop\png-transparent-online-chat-livechat-chat-room-baycreative-inc-google-icon-blue-text-logo.png">
+</head>
+<body>
+
+<h1>Welcome to Chatting app</h1>
+
+
+<div class="container">
+	
+	<div class="box" style="background-color: blue">
+		<h2>Leader</h2>
+		<img src="C:\Users\ADMIN\Desktop\brain-icon-logo-isolated-sign-260nw-1994657123.webp" width="200px" height="150px">
+		<input id="12" placeholder="Enter the text">
+		<button onclick="sendsms()">send</button>
+	
+	</div>
+	<div class="box1" id="mydiv" style="padding-left: 10px;padding-top: 1px;">
+		
+
+	</div>
+	<div class="box" style="background-color: yellow">
+		<h2 style="color: red">Followers</h2>
+		<img src="C:\Users\ADMIN\Desktop\6733490_preview.png " width="200px" height="150px">
+		<input id="13" placeholder="Enter the text">
+		<button onclick="sendsms()">send</button>
+	
+	</div>
+	
+<!-- ----------------------------------------------------------------------------------- -->	
+
+<script type="text/javascript">
+	
+function sendsms(){
+
+	value1 = document.getElementById("12").value;
+	value2 = document.getElementById("13").value;
+	element = document.createElement("li");
+
+	if(value1!="")
+	{
+		
+		text1 = document.createTextNode(value1);
+		element.appendChild(text1);
+		mydiv = document.getElementById("mydiv")
+		mydiv.appendChild(element);
+		element.style.color= "red";
+		document.getElementById("12").value="";
+		
+		
+	}
+	else if(value2!="")
+	{
+		
+		text2 = document.createTextNode(value2);
+		element.appendChild(text2);
+		mydiv = document.getElementById("mydiv")
+		mydiv.appendChild(element);
+		element.style.color= "blue";
+		document.getElementById("13").value ="";
+
+		
+	}
+}
+	
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
